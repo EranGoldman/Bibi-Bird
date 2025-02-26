@@ -7,6 +7,7 @@ import json
 import os
 from datetime import datetime
 
+
 def logo(url,response, count=0, pwd=0):
     
     os.system("cls" if os.name == "nt" else "clear")
@@ -46,7 +47,7 @@ def logo(url,response, count=0, pwd=0):
 ⟪                                               ⟫                                            
 ⟪ Hostname: {socket.gethostname()}                  ⟫
 ⟪                                               ⟫ 
-⟪ IP: {socket.gethostbyname(socket.gethostname())}                            ⟫ 
+⟪ IP: {socket.gethostbyname(socket.gethostname())}                                ⟫ 
 ⟪                                               ⟫ 
 ⟪ Python Version: {Fore.YELLOW + python_version + Fore.RESET}                        ⟫ 
 ⟪                                               ⟫ 

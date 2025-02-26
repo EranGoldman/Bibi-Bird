@@ -130,7 +130,14 @@ def inject(url, driver, response, wordlist, payload, delay):
     # email_credentials = ["admin' OR '1'='1'--", "user@example.com"]
     password_credentials = ["parrot"]
     
-    print(f"⟪ Injections Loaded: {len(email_credentials)}                         ⟫")
+    lenemail = len(email_credentials)
+    if lenemail <= 2:
+        print(f"⟪ Injections Loaded: {Fore.RED + str(lenemail) + Fore.RESET}                         ⟫")
+    if lenemail >= 20 and lenemail <= 39:
+        print(f"⟪ Injections Loaded: {Fore.YELLOW + str(lenemail) + Fore.RESET}                         ⟫")
+    if lenemail >= 40:
+        print(f"⟪ Injections Loaded: {Fore.GREEN + str(lenemail) + Fore.RESET}                         ⟫")
+    
     print("⟪                                               ⟫")
     print("⟪ Injection Queue:                              ⟫")
     print("⟪                                               ⟫")
@@ -168,6 +175,8 @@ def inject(url, driver, response, wordlist, payload, delay):
         print("⟪                                               ⟫")
         print("⟪===============================================⟫ ")
         print("⟪                                               ⟫")
+        print(create_box_line(f"Working Injection: {Fore.YELLOW + email_credentials[num - 1] + Fore.RESET}", 59, "left"))
+        print(f"⟪                                               ⟫")
         print(f"⟪ Redirection:                                  ⟫")
         print("⟪                                               ⟫")
         print(f"⟪ {current_url}           ⟫")
