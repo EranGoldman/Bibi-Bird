@@ -88,7 +88,7 @@ logo(url,response)
 if response.status_code >= 400:
    print("Error")
 else:
-   
+  try:
    if arg.brute:
     # brute(url,driver,response)
     subdomain(url,driver, "dict/sec.txt")
@@ -102,6 +102,11 @@ else:
       else:
          repeat_count = arg.repeat
       send_repeated_requests(arg.csrf, repeat_count, url)
-
+  except KeyboardInterrupt:
+                print("⟪                                               ⟫")
+                print("⟪ Stopping...                                   ⟫")
+                print("⟪                                               ⟫")
+                print("⟪±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±⟫")
+                exit(1)
 print("⟪                                               ⟫")
 print("⟪±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±⟫")

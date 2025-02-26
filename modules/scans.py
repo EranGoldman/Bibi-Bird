@@ -165,6 +165,14 @@ def inject(url, driver, response, wordlist, payload, delay):
 
             except Exception as e:
                 pass
+            except KeyboardInterrupt:
+                print("⟪                                               ⟫")
+                print("⟪ Stopping...                                   ⟫")
+                print("⟪                                               ⟫")
+                print(create_box_line(f"Last Injection: {Fore.RED + email_credentials[num - 1] + Fore.RESET}", 59, "left"))
+                print("⟪                                               ⟫")
+                print("⟪±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±⟫")
+                exit(1)
                 
     
     # Wait for the page to potentially redirect
